@@ -59,7 +59,6 @@ h6 {
   padding: 10px;
 }
 .latestPhoto1 {
-  background-image: url('../../../assets/images/adventure-photos/canoe-girl.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -68,7 +67,6 @@ h6 {
   margin: 0.5vw;
 }
 .latestPhoto2 {
-  background-image: url('../../../assets/images/adventure-photos/beach-bonfire.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -77,16 +75,6 @@ h6 {
   margin: 0.5vw;
 }
 .latestPhoto3 {
-  background-image: url('../../../assets/images/adventure-photos/mountain-hikers.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 21.5vw;
-  width: 21.5vw;
-  margin: 0.5vw;
-}
-.latestPhoto4 {
-  background-image: url('../../../assets/images/adventure-photos/night-sky.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

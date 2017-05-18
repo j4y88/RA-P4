@@ -35,7 +35,7 @@ export class BlogViewComponent implements OnInit {
         newBlog.title = myData[x]['title'];
         newBlog.content = (myData[x]['content'].replace(/&#039;/g, `'`));
         newBlog.categories = myData[x]['categories'];
-        newBlog.images = myData[x]['images'];
+        newBlog.image = myData[x]['image'];
         newBlog.date = myData[x]['date'];
         newBlog.author = myData[x]['author'];
         newList.blogs[x] = newBlog;
