@@ -105,29 +105,36 @@
 		<section id="latest">
 			<div class="flex flex-col">
 				<h1>LASTEST ADVENTURES</h1>
-				<div class="flex flex-row">
-					<div>
+				<div class="flex flex-rows">
+
+					<div class="">
 						<div class="latestPhoto1">
-							<h2>Getting Back to Nature in a Canoe</h2>
-							<button id="latestOne" type="button" class="latestButton" name="latestOne">READ MORE</button>
+							<h2 class="padding10">Getting Back to Nature in a Canoe</h2>
+							<button id="latestFour" type="button" class="latestButton marginH10" name="latestFour">READ MORE</button>
 						</div>
 					</div>
-					<div>
-						<div class="latestPhoto2">
-							<h2>A Night with Freinds at the Beach</h2>
-							<button id="latestOne" type="button" class="latestButton" name="latestOne">READ MORE</button>
+
+					<div class="flex flex-col">
+						<div class="">
+							<div class="latestPhoto2">
+								<h2 class="padding10">A Night with Friends at a Beach</h2>
+								<button id="latestFour" type="button" class="latestButton marginH10" name="latestFour">READ MORE</button>
+							</div>
 						</div>
-					</div>
-					<div>
-						<div class="latestPhoto3">
-							<h2>Taking in the View at Big Mountain</h2>
-							<button id="latestOne" type="button" class="latestButton" name="latestOne">READ MORE</button>
-						</div>
-					</div>
-					<div>
-						<div class="latestPhoto4">
-							<h2>Star-Gazing at the Night Sky</h2>
-							<button id="latestOne" type="button" class="latestButton" name="latestOne">READ MORE</button>
+
+						<div class="flex flex-row">
+							<div class="">
+								<div class="latestPhoto3">
+									<h2 class="padding10">Taking in the View at Big Mountain</h2>
+									<button id="latestFour" type="button" class="latestButton marginH10" name="latestFour">READ MORE</button>
+								</div>
+							</div>
+							<div class="">
+								<div class="latestPhoto4">
+									<h2 class="padding10">Star-Gazing at the Night Sky</h2>
+									<button id="latestFour" type="button" class="latestButton marginH10" name="latestFour">READ MORE</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -140,8 +147,13 @@
 	<div class="flex flex-row flex-center-j width90 marginH10">
 		<div class="flex flex-col padding10">
 			<h4 class="orange-color marginV10">CONTACT INFO</h4>
-			<p class="white-color marginV10">info@inhabitent.com</p>
+			<p class="white-color marginV10"><i class="white-color fa fa-envelope" aria-hidden="true"></i> info@inhabitent.com</p>
 			<p class="white-color marginV10">778-456-7891</p>
+			<div class="flex flex-row marginV10">
+				<i class="white-color fa fa-facebook-square" aria-hidden="true"></i>
+				<i class="white-color marginH10 fa fa-twitter-square" aria-hidden="true"></i>
+				<i class="white-color fa fa-google-plus-square" aria-hidden="true"></i>fa-envelope-o
+			</div>
 		</div>
 		<div class="flex flex-row flex-grow">
 			<div class="flex flex-col flex-grow padding10 marginH10">
@@ -157,4 +169,4 @@
 	</div>
 	<h6 class="white-color padding10 footerFineSpacing">COPYRIGHT &copy; 2016 INHABITENT</h6>
 </footer>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<app-blog-view></app-blog-view>

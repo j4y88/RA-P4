@@ -1,0 +1,29 @@
+<section id="latestblogs" class="flex flex-center-j">
+	<div class="flex width90">
+		<div class="flex flex-col">
+			<h1>LATEST BLOG POST</h1>
+			<div *ngIf='blogList'>
+			  <div *ngFor="let blog of blogList.blogs">
+			    <h3 class="latestTitleFont">{{blog.title}} <span class="latestDateFont">- {{blog.date}}</span></h3>
+			    <p class="latestContentFont">{{blog.content}}</p>
+			    <button type="button" name="READ MORE" id="{{blog.ID}}" class="latestContentButton">READ MORE <i class="fa fa-icon-long-arrow-right"></i></button>
+			  </div>
+			</div>
+		</div>
+		<div class="flex flex-col">
+			<h5>CONTACT INFO</h5>
+			<p>778-456-7891</p>
+			<p>info@inhabitent.com</p>
+			<p>1490 Broadway</p>
+			<p>Vancouver, BC, V6H 1H5</p>
+			<h5>BUSINESS HOURS</h5>
+			<p>Monday-Friday: 9am to 5pm</p>
+			<p>Saturday: 10am to 2pm</p>
+			<p>Sunday: Closed</p>
+			<h5>ARCHIEVES</h5>
+			<p>April</p>
+			<p>March</p>
+		</div>
+	</div>
+</section>
+

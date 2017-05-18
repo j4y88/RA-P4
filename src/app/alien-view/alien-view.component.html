@@ -1,0 +1,9 @@
+<p>
+  alien-view works!
+</p>
+<div *ngIf='alienHorde'>
+  <ul *ngFor="let alien of alienHorde.aliens">
+    <li>{{alien.id}} -  {{alien.type}}, {{alien.description}}</li>
+  </ul>
+
+</div>
