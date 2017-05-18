@@ -86,6 +86,9 @@ li {
 .width100 {
   width: 100%;
 }
+.height60px {
+  height: 60px;
+}
 .padding10 {
   padding: 10px;
 }
@@ -173,54 +176,6 @@ li {
   font-weight: bold;
   letter-spacing: 1px;
   margin: 5px 0px;
-}
-.latestPhoto1 {
-  background-image: url('../assets/images/adventure-photos/canoe-girl.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 44vw;
-  width: 44vw;
-}
-.latestPhoto2 {
-  background-image: url('../assets/images/adventure-photos/beach-bonfire.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 22vw;
-  width: 44vw;
-}
-.latestPhoto3 {
-  background-image: url('../assets/images/adventure-photos/mountain-hikers.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 22vw;
-  width: 22vw;
-}
-.latestPhoto4 {
-  background-image: url('../assets/images/adventure-photos/night-sky.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 22vw;
-  width: 22vw;
-}
-.latestButton {
-  color: white;
-  background-color: transparent;
-  border: 1px solid white;
-  padding: 5px 10px;
-}
-.lastestMoreButton {
-  background-color: #248a83;
-  color:white;
-  padding: 5px 13px;
-  margin: 10px 0px;
-  min-width: 100px;
-  max-width: 150px;
-  width: 55%;
-  border-style: none;
 }
 .footerBG {
   background-color: black;

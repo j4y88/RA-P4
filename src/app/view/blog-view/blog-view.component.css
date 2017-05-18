@@ -1,11 +1,14 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
 @font-face {
     font-family: Novecento;
-    src: url(../../assets/fonts/Novecento/Novecentosanswide-Normal.ttf);
+    src: url(../../../assets/fonts/Novecento/Novecentosanswide-Normal.ttf);
     font-weight: normal;
 }
 @font-face {
     font-family: Novecento;
-    src: url(../../assets/fonts/Novecento/Novecentosanswide-DemiBold.ttf);
+    src: url(../../../assets/fonts/Novecento/Novecentosanswide-DemiBold.ttf);
     font-weight: bold;
 }
 h1, h2, h3, h4, h5, h6 {

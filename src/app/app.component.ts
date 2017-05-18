@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BlogViewComponent } from './alien-view/blog-view.component';
+import { BlogViewComponent } from './view/blog-view/blog-view.component';
 
 @Component({
   selector: 'app-root',

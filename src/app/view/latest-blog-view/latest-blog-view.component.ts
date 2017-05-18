@@ -1,20 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogViewComponent } from '../blog-view/blog-view.component';
 
-import { BlogList } from '../model/blog-list';
-import { Blog } from '../model/blog'
-
-//import service
-
-import { BlogService } from '../services/blog.service'
-
+import { BlogList } from '../../model/blog-list';
+import { Blog } from '../../model/blog';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
-  selector: 'app-blog-view',
-  templateUrl: './blog-view.component.html',
-  styleUrls: ['./blog-view.component.css', 
-              '../../../node_modules/font-awesome/css/font-awesome.css']
+  selector: 'app-latest-blog-view',
+  templateUrl: './latest-blog-view.component.html',
+  styleUrls: ['./latest-blog-view.component.css']
 })
-export class BlogViewComponent implements OnInit {
+
+export class LatestBlogViewComponent implements OnInit {
   currentBlog:Blog;
   blogList:BlogList;
 
@@ -42,7 +39,6 @@ export class BlogViewComponent implements OnInit {
       }
     newList.count=myData.count;
     }
-    console.log(newList);
     this.blogList = newList;
     }
     myPromiseOfBlogs.then(extractDataFromPromise).catch(this.onDataError);
