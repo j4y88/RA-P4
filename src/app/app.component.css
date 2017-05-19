@@ -83,6 +83,9 @@ li {
   height: 40px;
   width: contain;
 }
+.width95 {
+  width: 95%;
+}
 .width90 {
   width: 90%;
 }

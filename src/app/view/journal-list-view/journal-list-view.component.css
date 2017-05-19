@@ -81,23 +81,23 @@ h6 {
   padding: 2px 5px;
   margin-bottom: 20px;
 }
-.blogListImage{
+.journalListImage{
   height: auto;
   width: 70vw;
 }
-.blogListTitle {
+.journalListTitle {
   position: relative;
   bottom: 27vw;
   background-color: #248a83;
   padding: 2vw;
   width: 30vw;
 }
-.blogListTitleTxt {
+.journalListTitleTxt {
   color: #ffffff;
   font-size: 1em;
   font-weight: bold;
 }
-.blogListTxt {
+.journalListTxt {
   position: relative;
   bottom: 4.5vw;
 }

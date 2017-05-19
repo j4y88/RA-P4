@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
 import { JournalList } from '../../model/journal-list';
-import { Journal } from '../../model/journal';
-import { JournalService } from '../../services/journal.service';
+import { Journal } from '../../model/journal'
+import { JournalService } from '../../services/journal.service'
+import { ArticleViewComponent } from '../article-view/article-view.component';
 
 @Component({
-  selector: 'app-article-view',
-  templateUrl: './article-view.component.html',
-  styleUrls: ['./article-view.component.css',
-  						'../../app.component.css']
+  selector: 'app-journal-list-view',
+  templateUrl: './journal-list-view.component.html',
+  styleUrls: ['./journal-list-view.component.css', 
+              '../../app.component.css',
+              '../../../../node_modules/font-awesome/css/font-awesome.css']
 })
-
-export class ArticleViewComponent implements OnInit {
-	currentJournal:Journal;
+export class JournalListViewComponent implements OnInit {
+  currentJournal:Journal;
   journalList:JournalList;
 
   constructor(private journalService: JournalService) {

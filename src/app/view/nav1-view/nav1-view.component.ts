@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppRoutes } from '../../app.routing';
 
 @Component({
   selector: 'app-nav1-view',

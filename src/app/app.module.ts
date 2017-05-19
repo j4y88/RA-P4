@@ -7,24 +7,25 @@ import { AppRoutes } from './app.routing';
 
 import { AppComponent } from './app.component';
 
-import { BlogService } from './services/blog.service';
+import { JournalService } from './services/journal.service';
 import { Nav1ViewComponent } from './view/nav1-view/nav1-view.component';
 import { BannerViewComponent } from './view/banner-view/banner-view.component';
 import { ShopViewComponent } from './view/shop-view/shop-view.component';
 import { JournalViewComponent } from './view/journal-view/journal-view.component';
-import { LatestBlogViewComponent } from './view/latest-blog-view/latest-blog-view.component';
+import { LatestAdventureViewComponent } from './view/latest-adventure-view/latest-adventure-view.component';
 import { FooterViewComponent } from './view/footer-view/footer-view.component';
 
-import { BlogViewComponent } from './view/blog-view/blog-view.component';
+import { JournalListViewComponent } from './view/journal-list-view/journal-list-view.component';
 import { HomeViewComponent } from './view/home-view/home-view.component';
 import { Nav2ViewComponent } from './view/nav2-view/nav2-view.component';
 import { ArticleViewComponent } from './view/article-view/article-view.component';
+import { JournalFormComponent } from './view/journal-form/journal-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlogViewComponent,
-    LatestBlogViewComponent,
+    JournalListViewComponent,
+    LatestAdventureViewComponent,
     FooterViewComponent,
     JournalViewComponent,
     ShopViewComponent,
@@ -33,6 +34,7 @@ import { ArticleViewComponent } from './view/article-view/article-view.component
     HomeViewComponent,
     Nav2ViewComponent,
     ArticleViewComponent,
+    JournalFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import { ArticleViewComponent } from './view/article-view/article-view.component
     HttpModule,
     AppRoutes,
   ],
-  providers: [BlogService],
+  providers: [JournalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

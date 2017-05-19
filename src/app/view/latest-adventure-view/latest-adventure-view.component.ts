@@ -5,14 +5,14 @@ import { Journal } from '../../model/journal';
 import { JournalService } from '../../services/journal.service';
 
 @Component({
-  selector: 'app-article-view',
-  templateUrl: './article-view.component.html',
-  styleUrls: ['./article-view.component.css',
-  						'../../app.component.css']
+  selector: 'app-latest-adventure-view',
+  templateUrl: './latest-adventure-view.component.html',
+  styleUrls: ['./latest-adventure-view.component.css',
+              '../../app.component.css']
 })
 
-export class ArticleViewComponent implements OnInit {
-	currentJournal:Journal;
+export class LatestAdventureViewComponent implements OnInit {
+  currentJournal:Journal;
   journalList:JournalList;
 
   constructor(private journalService: JournalService) {

@@ -1,22 +1,21 @@
 <app-nav2-view></app-nav2-view>
 <hr>
-<article class="flex flex-center-j">
+<section id="latestjournals" class="flex flex-center-j">
 	<div class="flex width90">
 		<div class="flex flex-col">
+			<h1>LATEST JOURNAL POST</h1>
 			<div *ngIf='journalList'>
 			  <div *ngFor='let journal of journalList.journals; let i=index'>
-			  	<div *ngIf='i<1' class="width95">
-			  		<div class="flex flex-col">
-				  		<img src="{{journal.image}}" class="journalListImage relative">
-				  		<div class="journalListTitle relative">
+			  	<div *ngIf='i<5' class="width90">
+			  		<div>
+				  		<img src="{{journal.image}}" class="journalListImage">
+				  		<div class="journalListTitle">
 				  			<h3 class="journalListTitleTxt">{{journal.title}}</h3>
 				  		</div>
-				  		<div>
-				  			<p class="latestDateFont journalListTxt relative journalListTitle">{{journal.date}}</p>
-				  		</div>
 			  		</div>
+				    <p class="latestDateFont journalListTxt">{{journal.date}}</p>
 				    <p class="latestContentFont journalListTxt">{{journal.content}}</p>
-				    
+				    <a routerLink='../article'><button type="button" name="READ MORE" id="{{journal.ID}}" class="latestContentButton journalListTxt" ng-click="">READ MORE <i class="fa fa-icon-long-arrow-right"></i></button></a>
 				   </div>
 			  </div>
 			</div>
@@ -36,6 +35,5 @@
 			<p>March</p>
 		</div>
 	</div>
-</article>
-<app-journal-form></app-journal-form>
+</section>
 

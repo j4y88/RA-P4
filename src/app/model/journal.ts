@@ -1,4 +1,4 @@
-export class Blog {
+export class Journal {
 	ID:number;
 	title:string;
 	content:string;

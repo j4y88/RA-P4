@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LatestBlogViewComponent } from './latest-blog-view.component';
+import { LatestAdventureViewComponent } from './latest-adventure-view.component';
 
 describe('LatestBlogViewComponent', () => {
-  let component: LatestBlogViewComponent;
-  let fixture: ComponentFixture<LatestBlogViewComponent>;
+  let component: LatestAdventureViewComponent;
+  let fixture: ComponentFixture<LatestAdventureViewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LatestBlogViewComponent ]
+      declarations: [ LatestAdventureViewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LatestBlogViewComponent);
+    fixture = TestBed.createComponent(LatestAdventureViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

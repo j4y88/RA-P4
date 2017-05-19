@@ -1,0 +1,112 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+    font-family: Novecento;
+    src: url(../../../assets/fonts/Novecento/Novecentosanswide-Normal.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Novecento;
+    src: url(../../../assets/fonts/Novecento/Novecentosanswide-DemiBold.ttf);
+    font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Novecento;
+  font-weight: normal;
+  color: black;
+}
+p {
+  font-family: Merriweather;
+  font-weight: 300;
+  font-size: 0.9em;
+  line-height: 1;
+}
+h1 {
+  text-align: center;
+  font-size: 1.3em;
+  padding: 30px 0px;
+}
+h2{
+  font-family: Merriweather;
+  font-size: 1.2em;
+  color: white;
+}
+h4 {
+  font-size: .95em;
+}
+h6 {
+  font-size: .8em;
+}
+.relative {
+  position: relative;
+}
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-flow: row wrap;
+}
+.flex-col {
+  flex-flow: column wrap;
+}
+.flex-center-j{
+  justify-content: center;
+}
+.flex-center-a{
+  align-items: center;
+}
+.width95 {
+  width: 95%;
+}
+.width90 {
+  width: 90%;
+}
+.width70 {
+  width: 70%;
+}
+.latestTitleFont {
+  color : #248a83;
+  font-weight: bold;
+}
+.latestDateFont {
+  color : #000000;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+.latestContentFont{
+  font-size: 0.9em;
+  margin: 13px 0px 10px 0px;
+}
+.latestContentButton{
+  background-color: white;
+  border-style: solid;
+  padding: 2px 5px;
+  margin-bottom: 20px;
+}
+.journalListImage{
+  height: auto;
+  width: 70vw;
+}
+.journalListTitle {
+  position: relative;
+  bottom: 27vw;
+  background-color: #248a83;
+  padding: 2vw;
+  width: 30vw;
+}
+.journalListTitleTxt {
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: bold;
+}
+.journalListTxt {
+  position: relative;
+  bottom: 4.5vw;
+}
+.bottomRight { 
+  position: relative;
+  left: 36vw;
+  bottom: 11vw;
+  text-align: right; 
+}
