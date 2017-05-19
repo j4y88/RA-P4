@@ -12,6 +12,7 @@ import { AppRoutes } from '../../app.routing';
   selector: 'app-blog-view',
   templateUrl: './blog-view.component.html',
   styleUrls: ['./blog-view.component.css', 
+              '../../app.component.css',
               '../../../../node_modules/font-awesome/css/font-awesome.css']
 })
 export class BlogViewComponent implements OnInit {

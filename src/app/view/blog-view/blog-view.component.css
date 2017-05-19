@@ -14,6 +14,7 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: Novecento;
   font-weight: normal;
+  color: black;
 }
 p {
   font-family: Merriweather;
@@ -52,8 +53,14 @@ h6 {
 .flex-center-a{
   align-items: center;
 }
+.width95 {
+  width: 95%;
+}
 .width90 {
   width: 90%;
+}
+.width70 {
+  width: 70%;
 }
 .latestTitleFont {
   color : #248a83;
@@ -73,4 +80,24 @@ h6 {
   border-style: solid;
   padding: 2px 5px;
   margin-bottom: 20px;
+}
+.blogListImage{
+  height: auto;
+  width: 70vw;
+}
+.blogListTitle {
+  position: relative;
+  bottom: 27vw;
+  background-color: #248a83;
+  padding: 2vw;
+  width: 30vw;
+}
+.blogListTitleTxt {
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: bold;
+}
+.blogListTxt {
+  position: relative;
+  bottom: 4.5vw;
 }
