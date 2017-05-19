@@ -58,26 +58,31 @@ h6 {
 .padding10 {
   padding: 10px;
 }
+.container {
+    position: relative;
+}
+.topleft {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.latestImg {
+  width: auto;
+  height: 100%;
+  position: center;
+  overflow: hidden;
+}
 .latestPhoto1 {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   height: 44.5vw;
   width: 44vw;
   margin: 0.5vw;
 }
 .latestPhoto2 {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   height: 22vw;
   width: 44vw;
   margin: 0.5vw;
 }
 .latestPhoto3 {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   height: 21.5vw;
   width: 21.5vw;
   margin: 0.5vw;

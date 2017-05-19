@@ -4,24 +4,20 @@ import { BlogViewComponent } from '../blog-view/blog-view.component';
 import { BlogList } from '../../model/blog-list';
 import { Blog } from '../../model/blog';
 import { BlogService } from '../../services/blog.service';
-
-import { DomSanitizer} from '@angular/platform-browser';
+import { AppRoutes } from '../../app.routing';
 
 @Component({
   selector: 'app-latest-blog-view',
   templateUrl: './latest-blog-view.component.html',
-  styleUrls: ['./latest-blog-view.component.css']
+  styleUrls: ['./latest-blog-view.component.css',
+              '../../app.component.css']
 })
 
 export class LatestBlogViewComponent implements OnInit {
   currentBlog:Blog;
   blogList:BlogList;
-  urlImage0 = "";
-  urlImage1 = "";
-  urlImage2 = "";
-  urlImage3 = "";
 
-  constructor(private blogService: BlogService, private sanitizer: DomSanitizer) {
+  constructor(private blogService: BlogService) {
     //console.log('creating blogView component');
   }
 
@@ -35,7 +31,7 @@ export class LatestBlogViewComponent implements OnInit {
       if (myData[x]!=='count'){
         let newBlog = new Blog();
         newBlog.ID = myData[x]['ID'];
-        newBlog.title = myData[x]['title'];
+        newBlog.title = (myData[x]['title'].replace(/&#039;/g, `'`));
         newBlog.content = (myData[x]['content'].replace(/&#039;/g, `'`));
         newBlog.categories = myData[x]['categories'];
         newBlog.image = myData[x]['image'];
@@ -46,14 +42,7 @@ export class LatestBlogViewComponent implements OnInit {
     newList.count=myData.count;
     }
     this.blogList = newList;
-    this.urlImage0=this.sanitizer.bypassSecurityTrustResourceUrl(this.blogList.blogs[0].image).toString();
-    console.log(this.urlImage0);
-    this.urlImage1=this.sanitizer.bypassSecurityTrustResourceUrl(this.blogList.blogs[1].image).toString();
-    console.log(this.urlImage1);
-    this.urlImage2=this.sanitizer.bypassSecurityTrustResourceUrl(this.blogList.blogs[2].image).toString();
-    console.log(this.urlImage2);
-    this.urlImage3=this.sanitizer.bypassSecurityTrustResourceUrl(this.blogList.blogs[3].image).toString();
-    console.log(this.urlImage3);
+    console.log(this.blogList);
     }
   myPromiseOfBlogs.then(extractDataFromPromise).catch(this.onDataError);
   }

@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { BlogList } from '../../model/blog-list';
 import { Blog } from '../../model/blog'
 
-//import service
 
 import { BlogService } from '../../services/blog.service'
+import { AppRoutes } from '../../app.routing';
 
 
 @Component({
@@ -32,7 +32,7 @@ export class BlogViewComponent implements OnInit {
       if (myData[x]!=='count'){
         let newBlog = new Blog();
         newBlog.ID = myData[x]['ID'];
-        newBlog.title = myData[x]['title'];
+        newBlog.title = (myData[x]['title'].replace(/&#039;/g, `'`));
         newBlog.content = (myData[x]['content'].replace(/&#039;/g, `'`));
         newBlog.categories = myData[x]['categories'];
         newBlog.image = myData[x]['image'];

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { BlogViewComponent } from './view/blog-view/blog-view.component';
+import { HomeViewComponent } from './view/home-view/home-view.component'
+import { FooterViewComponent } from './view/footer-view/footer-view.component';
 
 @Component({
   selector: 'app-root',

@@ -1,36 +1,48 @@
-<section id="latest">
-	<h1>LASTEST ADVENTURES</h1>
-		<div *ngIf='blogList'>
-			<div class="flex width100">
-				<div class="">
-					<div [style.backgroundImage]="blogList.blogs[0].image" class="latestPhoto1">
-						<h2 class="padding10">{{blogList.blogs[0].title}}</h2>
-						<button id="{{blogList.blogs[0].id}}" type="button" class="latestButton marginH10" name="{{blogList.blogs[0].id}}">READ MORE</button>
+<div *ngIf='blogList'>
+	<section id="latest">
+		<h1>LASTEST ADVENTURES</h1>
+			<div class="flex">
+				<div>
+					<div class="latestPhoto1 container">
+						<img src="{{blogList.blogs[0].image}}" class="latestPhoto1">
+						<div class="topleft">
+							<h2 class="padding10">{{blogList.blogs[0].title}}</h2>
+							<button id="{{blogList.blogs[0].id}}" type="button" class="latestButton marginH10" name="{{blogList.blogs[0].id}}">READ MORE</button>
+						</div>
 					</div>
 				</div>
 				<div class="flex flex-col">
-					<div class="">
-						<div ng-style="blogList.blogs[0].image != '' && {'background-image':'url('+blogList.blogs[1].image+')'}"class="latestPhoto2">
-							<h2 class="padding10">{{blogList.blogs[1].title}}</h2>
-							<button id="{{blogList.blogs[0].id}}" type="button" class="latestButton marginH10" name="{{blogList.blogs[0].id}}">READ MORE</button>
-						</div>
-					<div class="flex flex-row">
-						<div class="">
-							<div ng-style="blogList.blogs[0].image != '' && {'background-image':'url('+blogList.blogs[2].image+')'}" class="latestPhoto3">
-								<h2 class="padding10">{{blogList.blogs[2].title}}</h2>
+					<div>
+						<div class="latestPhoto2 container">
+							<img src="{{blogList.blogs[1].image}}" class="latestPhoto2">
+							<div class="topleft">
+								<h2 class="padding10">{{blogList.blogs[1].title}}</h2>
 								<button id="{{blogList.blogs[0].id}}" type="button" class="latestButton marginH10" name="{{blogList.blogs[0].id}}">READ MORE</button>
 							</div>
 						</div>
-						<div class="">
-							<div ng-style="blogList.blogs[0].image != '' && {'background-image':'url('+blogList.blogs[3].image+')'}" class="latestPhoto3">
-								<h2 class="padding10">{{blogList.blogs[3].title}}</h2>
-								<button id="{{blogList.blogs[0].id}}" type="button" class="latestButton marginH10" name="{{blogList.blogs[0].id}}">READ MORE</button>
+					<div class="flex flex-row">
+						<div>
+							<div class="latestPhoto3 container">
+								<img src="{{blogList.blogs[2].image}}" class="latestPhoto3">
+								<div class="topleft">
+									<h2 class="padding10">{{blogList.blogs[2].title}}</h2>
+									<button id="{{blogList.blogs[0].id}}" type="button" class="latestButton marginH10" name="{{blogList.blogs[0].id}}">READ MORE</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="latestPhoto3 container">
+								<img src="{{blogList.blogs[3].image}}" class="latestPhoto3">
+								<div class="topleft">
+									<h2 class="padding10">{{blogList.blogs[3].title}}</h2>
+									<button id="{{blogList.blogs[0].id}}" type="button" class="latestButton marginH10" name="{{blogList.blogs[0].id}}">READ MORE</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			</div>
 		</div>
-	<button id="latestOne" type="button" class="lastestMoreButton" name="latestOne">MORE ADVENTURES</button>
+	<a routerLink='../blog'><button id="latestOne" type="button" class="lastestMoreButton" name="latestOne">MORE ADVENTURES</button></a>
 </section>
+</div>
