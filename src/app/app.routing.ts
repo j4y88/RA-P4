@@ -10,7 +10,7 @@ export const Router: Routes = [
 	{path: '', redirectTo: 'home', pathMatch: 'full'},
 	{path: 'home', component: HomeViewComponent},
 	{path: 'journal', component: JournalListViewComponent},
-	{path: 'article', component: ArticleViewComponent},
+	{path: 'article/:ID', component: ArticleViewComponent},
 ];
 
 export const AppRoutes: ModuleWithProviders = RouterModule.forRoot(Router);

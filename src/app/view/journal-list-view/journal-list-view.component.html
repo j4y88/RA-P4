@@ -15,7 +15,7 @@
 			  		</div>
 				    <p class="latestDateFont journalListTxt">{{journal.date}}</p>
 				    <p class="latestContentFont journalListTxt">{{journal.content}}</p>
-				    <a routerLink='../article'><button type="button" name="READ MORE" id="{{journal.ID}}" class="latestContentButton journalListTxt" ng-click="">READ MORE <i class="fa fa-icon-long-arrow-right"></i></button></a>
+				    <a [routerLink]="['/article', journal.ID]"><button type="button" name="READ MORE" id="{{journal.ID}}" class="latestContentButton journalListTxt" ng-click="">READ MORE <i class="fa fa-icon-long-arrow-right"></i></button></a>
 				   </div>
 			  </div>
 			</div>

@@ -15,28 +15,19 @@ export class JournalService {
   constructor(private http: Http) { }
 
   getJournals(): Promise<Journal[]> {
-    /* 
-    const getTheData = this.http.get(this.blogsUrl);
-    //console.log(getTheData);
-    let newPromise: any = getTheData.toPromise();
-    console.log(newPromise);
-    let successFn: Function = (response) => {
-      let blogList: BlogList = response.json();
-      //console.log(blogList);
-      let allBlogs = blogList.blogs;
-      //console.log(allBlogs);
-
-      return allBlogs;
-    };
-    newPromise.then(successFn).catch(this.handleError);
-    */
-
     let newPromise: any =  
     this.http.get(this.journalsUrl)
     .toPromise()
     .then( resp => {return resp.json(); } )
     .catch( err => {console.log(err)} );
+    console.log(newPromise);
     return newPromise;
+  }
+
+  getJournal(id: number): Promise<Journal> {
+    return this.getJournals()
+    .then(journals => journals
+    .find(journal => journal.ID == id));
   }
 
   handleError(error) {

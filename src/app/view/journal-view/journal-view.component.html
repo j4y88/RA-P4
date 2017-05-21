@@ -11,7 +11,7 @@
 						<p>{{journalList.journals[0].date}}</p>
 						<h3 class="journalTxt">{{journalList.journals[0].title}}</h3>
 					</div>
-					<a routerLink='../article'><button id="{{journalList.journals[0].ID}}" type="button" class="journalButton" name="journalone">READ ENTRY</button></a>
+					<a [routerLink]="['/article', journalList.journals[0].ID]"><button id="{{journalList.journals[0].ID}}" type="button" class="journalButton" name="journalone">READ ENTRY</button></a>
 				</div>
 			</div>
 		</div>
@@ -23,7 +23,7 @@
 						<p>{{journalList.journals[1].date}}</p>
 						<h3 class="journalTxt">{{journalList.journals[1].title}}</h3>
 					</div>
-					<a routerLink='../article'><button id="{{journalList.journals[1].ID}}" type="button" class="journalButton" name="journaltwo">READ ENTRY</button></a>
+					<a [routerLink]="['/article', journalList.journals[1].ID]"><button id="{{journalList.journals[1].ID}}" type="button" class="journalButton" name="journaltwo">READ ENTRY</button></a>
 				</div>
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 						<p>{{journalList.journals[2].date}}</p>
 						<h3 class="journalTxt">{{journalList.journals[2].title}}</h3>
 					</div>
-					<a routerLink='../article'><button id="{{journalList.journals[2].ID}}" type="button" class="journalButton" name="journalthree">READ ENTRY</button></a>
+					<a [routerLink]="['/article', journalList.journals[2].ID]"><button id="{{journalList.journals[2].ID}}" onclick="getArticle($event)" type="button" class="journalButton" name="journalthree">READ ENTRY</button></a>
 				</div>
 			</div>
 		</div>

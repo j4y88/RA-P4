@@ -1,12 +1,12 @@
 <section id="navigation" class="flex flex-col flex-center-a">
 	<div class="fixed flex flex-row flex-space-between flex-center-a width90"> 
 		<div>
-			<img src="../assets/images/logos/inhabitent-logo-tent-white.svg" class="navSize padding10">
+			<a [routerLink]="['/home']"><img src="../assets/images/logos/inhabitent-logo-tent-white.svg" class="navSize padding10"></a>
 		</div>
 		<div class="padding10">
 			<ul class="flex flex-row">
 				<li class="white-color">SHOP</li>
-				<li class="white-color"><a routerLink='../journal'>JOURNAL</a></li>
+				<li class="white-color"><a [routerLink]="['/journal']">JOURNAL</a></li>
 				<li class="white-color">ABOUT</li>
 				<li class="white-color">FIND US</li>
 			</ul>
