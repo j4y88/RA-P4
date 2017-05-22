@@ -53,7 +53,6 @@ export class ArticleViewComponent implements OnInit {
       newList.count=myData.count;
       }
       this.journalList = newList;
-      console.log(this.journalList);
 
       this.getArticle(this.journalList);
     }
@@ -67,11 +66,9 @@ export class ArticleViewComponent implements OnInit {
   }
 
   getArticle(journalList: JournalList): void {
-    console.log(this.idValue);
-    console.log(this.journalList);
     for (let i=0; i<this.journalList.count; i++) {
       if (this.idValue == this.journalList.journals[i].ID) {
-        this.idValue= this.journalList.journals[i].ID;
+        this.idValue = this.journalList.journals[i].ID;
         this.titleValue = this.journalList.journals[i].title;
         this.contentValue = this.journalList.journals[i].content;
         this.categoriesValue = this.journalList.journals[i].categories;

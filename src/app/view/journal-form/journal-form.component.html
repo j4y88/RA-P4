@@ -1,14 +1,30 @@
 <div>
 	<h2>POST A NEW JOURNAL</h2>
-	<form>
-	  <label>Title:</label>
-	  <input type="text" name="title" required><br>
-	  <label>Content:</label>
-	  <textarea [(ngModel)]="encounter.action" name="content" required></textarea><br>
-	  <label>Image URL:</label>
-	  <input type="text" name="image"><br>
-	  <label>Categories:</label>
-	  <input type="text" name="categories"><br>
-	  <button type="submit" [disabled]="noJournal || !journalForm.form.valid">Submit</button>
+	<form (ngSubmit) = "submitForm(jform)">
+    <div class="flex flex-col">
+    	<div>
+	      <label>Name: </label>
+	      <input [(ngModel)]="jform.author" name="author" placeholder="name" class="width200p">
+      </div>
+      <div>
+	      <label>Title: </label>
+	      <input [(ngModel)]="jform.title" name="title" placeholder="title" class="width200p">
+      </div>
+      <div>
+	      <label>Content: </label>
+	      <input [(ngModel)]="jform.content" name="content" placeholder="content" class="width200p">
+      </div>
+      <div>
+	      <label>Categories: </label>
+	      <input [(ngModel)]="jform.categories" name="categories" placeholder="categories" class="width200p">
+      </div>
+      <div>
+	      <label>Image URL: </label>
+	      <input [(ngModel)]="jform.image" name="image" placeholder="image" class="width200p">
+      </div>
+    </div>
+    <button type="submit" name="submit">Submit</button>
 	</form>
 </div>
+
+<pre>Form : {{ jform.author }} {{ jform.title }} {{ jform.content }} {{ jform.image }} {{ jform.categories }}</pre>

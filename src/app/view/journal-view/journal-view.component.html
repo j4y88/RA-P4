@@ -2,9 +2,14 @@
 	<div>
 		<h1>INHABITENT JOURNAL</h1>
 	</div>
-	<div class="flex flex-row flex-space-between width95">
+	<div class="flex flex-row flex-space-between">
+		<style scoped>
+			.image1 {background: url({ journalList.journals[0].image });}
+			.image2 {background: url(journalList.journals[1].image);}
+			.image3 {background: url(journalList.journals[2].image);}
+		</style>
 		<div class="journalCell">
-			<img src="{{journalList.journals[0].image}}" class="journalThumb">
+			<img src="{{journalList.journals[0].image}}" onerror="this.src='../../../../assets/images/error.png'" class="journalThumb image1">
 			<div class="flex flex-col flex-space-between">
 				<div class="greyBox flex flex-col">
 					<div class="flex-grow height60px">
@@ -16,7 +21,7 @@
 			</div>
 		</div>
 		<div class="journalCell">
-			<img src="{{journalList.journals[1].image}}" class="journalThumb">
+			<img src="{{journalList.journals[1].image}}" onerror="this.src='../../../../assets/images/error.png'" class="journalThumb">
 			<div class="flex flex-col flex-space-between">
 				<div class="greyBox">
 					<div class="height60px">
@@ -28,7 +33,7 @@
 			</div>
 		</div>
 		<div class="journalCell">
-			<img src="{{journalList.journals[2].image}}" class="journalThumb">
+			<img src="{{journalList.journals[2].image}}" onerror="this.src='../../../../assets/images/error.png'" class="journalThumb">
 			<div class="flex flex-col flex-space-between">
 				<div class="greyBox">
 					<div class="height60px">

@@ -27,9 +27,7 @@ h1 {
   padding: 30px 0px;
 }
 h2{
-  font-family: Merriweather;
   font-size: 1.2em;
-  color: white;
 }
 h4 {
   font-size: .95em;
@@ -74,18 +72,23 @@ h6 {
 }
 .latestPhoto1 {
   height: 44.5vw;
-  width: 44vw;
-  margin: 0.5vw;
+  width: 44.5vw;
+  margin: 0vw 0.25vw 0vw 0vw;
 }
 .latestPhoto2 {
   height: 22vw;
-  width: 44vw;
-  margin: 0.5vw;
+  width: 44.75vw;
+  margin: 0vw 0vw 0.25vw 0.25vw;
 }
 .latestPhoto3 {
-  height: 21.5vw;
-  width: 21.5vw;
-  margin: 0.5vw;
+  height: 22vw;
+  width: 22vw;
+  margin: 0.25vw 0.25vw 0vw 0.25vw;
+}
+.latestPhoto4 {
+  height: 22vw;
+  width: 22vw;
+  margin: 0.25vw 0vw 0vw 0.5vw;
 }
 .latestButton {
   color: white;
@@ -96,10 +99,31 @@ h6 {
 .lastestMoreButton {
   background-color: #248a83;
   color:white;
-  padding: 5px 13px;
-  margin: 10px 0px;
+  padding: 6px 10px;
+  margin: 20px 0px;
   min-width: 100px;
   max-width: 150px;
   width: 55%;
   border-style: none;
+}
+.latestTxt {
+  font-family: Merriweather;
+  font-size: 2.5em;
+  color: white;
+  margin: 15px 0px;
+  line-height: 1.2;
+}
+.latestTxt2 {
+  font-family: Merriweather;
+  font-size: 2em;
+  color: white;
+  margin: 15px 0px 10px 0PX;
+  line-height: 1.2;
+}
+.latestTxt3 {
+  font-family: Merriweather;
+  font-size: 1.5em;
+  color: white;
+  margin: 15px 0px 5px 0px;
+  line-height: 1.2;
 }

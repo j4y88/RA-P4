@@ -23,8 +23,8 @@ p {
 }
 h1 {
   text-align: center;
-  font-size: 1.3em;
-  padding: 30px 0px;
+  font-size: 1.5em;
+  padding: 35px 0px;
 }
 h2{
   font-family: Merriweather;
@@ -165,7 +165,7 @@ li {
   width:90%;
 }
 .journalThumb {
-  height: contain;
+  height: 200px;
   width: 100%;
 }
 .journalCell{
