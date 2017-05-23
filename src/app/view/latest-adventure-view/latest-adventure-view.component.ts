@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { JournalList } from '../../model/journal-list';
 import { Journal } from '../../model/journal';
@@ -7,7 +7,8 @@ import { JournalService } from '../../services/journal.service';
 @Component({
   selector: 'app-latest-adventure-view',
   templateUrl: './latest-adventure-view.component.html',
-  styleUrls: ['./latest-adventure-view.component.css']
+  styleUrls: ['./latest-adventure-view.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class LatestAdventureViewComponent implements OnInit {

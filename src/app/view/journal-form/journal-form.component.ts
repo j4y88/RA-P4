@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component , ViewEncapsulation} from '@angular/core';
+import { Router } from '@angular/router';
 import { PostJournal } from '../../model/post-journal';
 import { Journal } from '../../model/journal';
 import { JournalService } from '../../services/journal.service';
@@ -6,22 +7,23 @@ import { JournalService } from '../../services/journal.service';
 @Component({
   selector: 'app-journal-form',
   templateUrl: './journal-form.component.html',
-  styleUrls: ['./journal-form.component.css']
+  styleUrls: ['./journal-form.component.css','../../../../node_modules/font-awesome/css/font-awesome.css'],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class JournalFormComponent {
 	send = JournalService;
   jform: Journal = {
     ID: 1,
-		title: 'Bond James Bond',
-		content: 'Shaken not stirred.',
-		categories: [ 'spy', 'agent', '007'],
-		image: 'http://www.007.com/wp-content/uploads/2016/10/CAROUSEL.png',
+		title: '',
+		content: '',
+		categories: [],
+		image: '',
 		date: '',
-		author: 'Penny',
+		author: '',
   };
 
-  constructor(private journalService: JournalService){}
+  constructor(private journalService: JournalService, private router: Router){}
 
   submitForm(e:any) {
     console.log((e.target as HTMLButtonElement).parentElement);
@@ -30,8 +32,8 @@ export class JournalFormComponent {
     console.log(serializedForm);
     const formData = JSON.stringify(serializedForm);
     console.log(formData);
-    //const dataParams = { 'params': formData };
-    //console.log(dataParams);
     const postThisJournal = this.journalService.createJournal(formData);
+    alert('Journal Sent!');
+    this.router.navigate(['/journal']);
   }
 }

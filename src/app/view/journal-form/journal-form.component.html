@@ -1,13 +1,13 @@
 <br>
 <h3>POST A NEW JOURNAL</h3>
-<form id="apiForm" method="post" #apiForm="ngForm">
+<form id="apiForm" method="post" #apiForm="ngForm" class="marginB25">
   <div class="flex flex-col">
     <div class="flex flex-row flex-center-a">
     	<div class="width15">
       	<label class="formInputField">Title: </label>
       </div>
       <div class="width80">
-      	<input type="text" id ="title" name="title" placeholder="Title" value="Bond... James Bond" class="form-field" required>
+      	<input type="text" id ="title" name="title" placeholder="Title" value="No Beer and No TV make" class="form-field" required>
       </div>
     </div>
     <div class="flex flex-row flex-center-a">
@@ -15,7 +15,11 @@
       	<label class="formInputField">Content: </label>
       </div>
       <div class="width80">
-      	<textarea name="content" id="content" class="form-field" rows="5" placeholder="Content" required>Although agent 007 may laugh in the face of death, one thing he never takes lightly is his drinking. Then again, if your job involved ventilating bad guys with a Walther P99, you might turn to the bottle as well. Here he shows off his remarkable palate by ordering his signature drink.</textarea>
+      	<textarea name="content" id="content" class="form-field" rows="5" placeholder="Content" required>Lisa: “Can you tell me what happens at the end of the series?”
+
+JK Rowling (kind of ticked): “Yes, he grows up and marries you… Is that what you want to hear?”
+
+Lisa (sighs, happily):  “Yes…”</textarea>
       </div>
     </div>
     <div class="flex flex-row flex-center-a">
@@ -23,7 +27,7 @@
       	<label class="formInputField">Image URL: </label>
       </div>
       <div class="width80">
-      	<input type="text" id="image" name="image" placeholder="Image Link" value="https://www.it.mk/wp-content/uploads/2015/11/James-Bond-Logo.jpg" class="form-field" required>
+      	<input type="text" id="image" name="image" placeholder="Image Link" value="https://i.ytimg.com/vi/MYp7UAsSEcw/maxresdefault.jpg" class="form-field" required>
       </div>
     </div>
     <div class="flex flex-row flex-center-a">
@@ -31,10 +35,14 @@
         <label class="formInputField">Categories: </label>
       </div>
       <select multiple id="categories" name="categories" class="form-field" required>
-        <option>--select--</option>
+        <option disabled="disabled">--select--</option>
         <option>Adventure</option>
+        <option>Inhabitent</option>
+        <option>Nature</option>
+        <option>Camping</option>
+        <option>Simpsons</option>
       </select>
     </div>
   </div>
-  <button class="green-btn" type="button" name="submit" id="submit" (click)="submitForm($event)">Submit <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+  <button class="formButton" type="button" name="submit" id="submit" (click)="submitForm($event)">Submit <i class="fa fa fa-arrow-right" aria-hidden="true"></i></button>
 </form>

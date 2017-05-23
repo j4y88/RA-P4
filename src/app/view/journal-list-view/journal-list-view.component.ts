@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { JournalList } from '../../model/journal-list';
 import { Journal } from '../../model/journal'
@@ -8,8 +8,8 @@ import { ArticleViewComponent } from '../article-view/article-view.component';
 @Component({
   selector: 'app-journal-list-view',
   templateUrl: './journal-list-view.component.html',
-  styleUrls: ['./journal-list-view.component.css',
-              '../../../../node_modules/font-awesome/css/font-awesome.css']
+  styleUrls: ['./journal-list-view.component.css','../../../../node_modules/font-awesome/css/font-awesome.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class JournalListViewComponent implements OnInit {
   currentJournal:Journal;

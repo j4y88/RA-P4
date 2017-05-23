@@ -1,3 +1,6 @@
+/* ---------CSS RESET--------- */
+/* ---------CSS RESET--------- */
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -77,7 +80,8 @@ input, select {
     vertical-align:middle;
 }
 
-
+/* ---------GLOBAL CSS--------- */
+/* ---------GLOBAL CSS--------- */
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -96,6 +100,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Novecento;
   font-weight: normal;
 }
+body{
+  font-size: 14px;
+}
 p {
   font-family: Merriweather;
   font-weight: 300;
@@ -104,19 +111,23 @@ p {
 }
 h1 {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   padding: 35px 0px;
 }
 h2{
   font-family: Merriweather;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: white;
 }
+h3{
+  font-size: 1rem;
+}
 h4 {
-  font-size: .95em;
+  font-size: .95rem;
 }
 h5 {
-  font-size: .9em;
+  font-size: .9rem;
+  margin: 10px 0px 5px 0px;
 }
 h6 {
   font-size: .8em;
@@ -131,16 +142,16 @@ a {
   text-decoration: none
 }
 a:link {
-    color: white;
+    color: black;
 }
 a:visited {
-    color: white;
+    color: black;
 }
 a:hover {
-    color: white;
+    color: black;
 }
 a:active {
-    color: white;
+    color: black;
 }
 .fixed {
   position: absolute;
@@ -179,14 +190,26 @@ a:active {
   height: 40px;
   width: contain;
 }
+.width100 {
+  width: 100%;
+}
 .width95 {
   width: 95%;
 }
 .width90 {
   width: 90%;
 }
-.width100 {
-  width: 100%;
+.width80 {
+  width: 80%;
+}
+.width75 {
+  width: 75%;
+}
+.width70 {
+  width: 70%;
+}
+.width15 {
+  width: 15%;
 }
 .height60px {
   height: 60px;
@@ -209,8 +232,14 @@ a:active {
 .marginH10 {
   margin: 0px 10px;
 }
+.marginR10 {
+  margin-right: 10px;
+}
 .marginH5 {
   margin: 0px 5px;
+}
+.marginB25 {
+  margin-bottom: 25px;
 }
 .white-color {
   color: white;
@@ -218,17 +247,48 @@ a:active {
 .orange-color{
   color: orange;
 }
+.mainSides {
+  width:90%;
+}
+.container {
+    position: relative;
+}
+.bold {
+  font-weight: bold;
+}
+.shadowTxt {
+  text-shadow: 2px 2px grey;
+}
+
+/* ---------NAV--------- */
+/* ---------NAV--------- */
+ .bottomLine {
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px;
+}
+
+/* ---------BANNER--------- */
+/* ---------BANNER--------- */
+
 .heroBanner {
   background-image: url(assets/images/home-hero.jpg);
-  background-position: top center;
-  background-size: 100% auto;
+  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
-  padding: 13vh 0px;
 }
 .heroLogo {
-  height: 150px;
+  height: 175px;
   width: auto;
 }
+.heroCell {
+  height:55vh;
+  width:100%;
+  min-height: 300px;
+}
+
+/* ---------SHOP--------- */
+/* ---------SHOP--------- */
+
 .shopIcon {
   height: 50px;
   width: auto;
@@ -251,17 +311,17 @@ a:active {
 .shopCell {
   width: 21%;
   min-width: 175px;
-  max-width: 200px;
-  margin: 1vw 1vw ;
+  max-width: 190px;
 }
 .greyBox {
   border: 1px solid lightgrey;
   border-width: 3px 1px 1px 1px;
   padding: 10px;
 }
-.mainSides {
-  width:90%;
-}
+
+/* ---------JOURNAL--------- */
+/* ---------JOURNAL--------- */
+
 .journalThumb {
   height: 18vw;
   width: 100%;
@@ -271,7 +331,7 @@ a:active {
   height: auto;
 }
 .journalButton {
-  background-color: white;
+  background-color: transparent;
   width: 100px;
   margin-top: 10px;
   border-style: solid;
@@ -282,6 +342,126 @@ a:active {
   letter-spacing: 1px;
   margin: 5px 0px;
 }
+.journalListButton {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #248a83;
+  padding: 5px 13px;
+}
+.journalListImage {
+  position: absolute;
+  height: 35vw;
+  width: 65vw;
+}
+.journalTitleTxt {
+  position: absolute;
+  top:25%;
+  background-color: #248a83;
+  font-family: Novecento;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #ffffff;
+  padding: 1.5rem 3rem 1.5rem 1.5rem;
+  max-width: 20vw
+}
+.journalDateTxt {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #248a83;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: bold;
+  max-width: 15vw
+}
+.journalContentTxt {
+  margin: 10px 0px;
+}
+.journalImageCell {
+  position: relative;
+  height: 35vw;
+  width: 65vw;
+}
+.verticalLine {
+  border-right: 1px solid grey;
+  margin-right: 5px;
+}
+
+/* ---------ADVENTURE--------- */
+/* ---------ADVENTURE--------- */
+
+.latestImg {
+  width: auto;
+  height: 100%;
+  position: center;
+  overflow: hidden;
+}
+.latestPhoto1 {
+  height: 44.5vw;
+  width: 44.5vw;
+  margin: 0vw 0.25vw 0vw 0vw;
+}
+.latestPhoto2 {
+  height: 22vw;
+  width: 44.75vw;
+  margin: 0vw 0vw 0.25vw 0.25vw;
+}
+.latestPhoto3 {
+  height: 21.75vw;
+  width: 22vw;
+  margin: 0.25vw 0.25vw 0vw 0.25vw;
+}
+.latestPhoto4 {
+  height: 21.75vw;
+  width: 22vw;
+  margin: 0.25vw 0vw 0vw 0.5vw;
+}
+.latestButton {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 5px 13px;
+}
+.lastestMoreButton {
+  background-color: #248a83;
+  color:white;
+  padding: 5px 13px;
+  margin: 20px 0px;
+  min-width: 100px;
+  max-width: 150px;
+  width: 55%;
+  border-style: none;
+}
+.latestTxt {
+  font-family: Merriweather;
+  font-size: 2.5em;
+  color: white;
+  margin: 15px 0px;
+  line-height: 1.2;
+}
+.latestTxt2 {
+  font-family: Merriweather;
+  font-size: 2em;
+  color: white;
+  margin: 15px 0px 10px 0PX;
+  line-height: 1.2;
+}
+.latestTxt3 {
+  font-family: Merriweather;
+  font-size: 1.5em;
+  color: white;
+  margin: 15px 0px 5px 0px;
+  line-height: 1.2;
+}
+.topleft {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+/* ---------FOOTER--------- */
+/* ---------FOOTER--------- */
+
 .footerBG {
   background-color: black;
 }
@@ -290,4 +470,32 @@ a:active {
 }
 .footerFineSpacing{
   margin-top: 40px;
+}
+
+/* ---------FORM--------- */
+/* ---------FORM--------- */
+
+input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 70%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+.formButton {
+  color: #ffffff;
+  background-color: #248a83;
+  border: 1px solid #248a83;
+  padding: 5px 13px;
+}
+.formInputField {
+  margin : 20px 0px;
 }
