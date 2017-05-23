@@ -1,27 +1,17 @@
 <app-nav2-view></app-nav2-view>
-<hr>
 <article class="flex flex-center-j">
-	<div class="flex width90">
-		<div class="flex flex-row">
-			<div>
-			  <div>
-			  	<div class="width95">
-			  		<div class="flex flex-col">
-				  		<img src="{{ imageValue }}" onerror="this.src='../../../../assets/images/error.png'" class="journalListImage relative">
-				  		<div class="journalListTitle relative">
-				  			<h3 class="journalListTitleTxt">{{ titleValue }}</h3>
-				  		</div>
-				  		<div>
-				  			<p class="latestDateFont journalListTxt relative journalListTitle">{{ dateValue }}</p>
-				  		</div>
-			  		</div>
-				    <p class="latestContentFont journalListTxt">{{ contentValue }}</p>
-				    <p></p>
-				   </div>
-			  </div>
+	<div class="flex width90 flex-row">
+		<div class="flex flex-col width75 verticalLine">
+			<div class="flex flex-col">
+				<div class="journalImageCell">
+					<img src="{{ imageValue }}" onerror="this.src='../../../../assets/images/error.png'" class="journalListImage relative">
+					<p class="journalTitleTxt">{{ titleValue }}</p>
+					<p class="journalDateTxt">{{ dateValue }}</p>
+				</div>
 			</div>
+		<p class="journalContentTxt">{{ contentValue }}</p>
 		</div>
-		<div class="flex flex-col">
+		<div class="flex flex-col marginH10">
 			<h5>CONTACT INFO</h5>
 			<p>778-456-7891</p>
 			<p>info@inhabitent.com</p>
@@ -36,20 +26,5 @@
 			<p>March</p>
 		</div>
 	</div>
-</article>
+</article><br>
 <app-journal-form></app-journal-form>
-
-<article class="width90">
-	<div class="flex flex-row">
-		<div class="flex flex-col">
-			<div class="flex flex-col">
-				<img>
-				<div>
-					<p></p>
-					<p></p>
-				</div>
-			</div>
-		<p></p>
-		</div>
-	</div>
-</article>

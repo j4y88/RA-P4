@@ -1,6 +1,6 @@
-import { Component, OnInit }      from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Location }               from '@angular/common';
+import { Location, NgStyle } from '@angular/common';
 
 import { JournalList } from '../../model/journal-list';
 import { Journal } from '../../model/journal';
