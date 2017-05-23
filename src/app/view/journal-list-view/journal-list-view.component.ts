@@ -8,8 +8,7 @@ import { ArticleViewComponent } from '../article-view/article-view.component';
 @Component({
   selector: 'app-journal-list-view',
   templateUrl: './journal-list-view.component.html',
-  styleUrls: ['./journal-list-view.component.css', 
-              '../../app.component.css',
+  styleUrls: ['./journal-list-view.component.css',
               '../../../../node_modules/font-awesome/css/font-awesome.css']
 })
 export class JournalListViewComponent implements OnInit {
@@ -32,7 +31,7 @@ export class JournalListViewComponent implements OnInit {
         if (myData[x]!=='count'){
           let newJournal = new Journal();
           newJournal.ID = myData[x]['ID'];
-          newJournal.title = (myData[x]['title'].replace(/&#039;/g, `'`));
+          newJournal.title = (myData[x]['title'].replace(/&#039;/g, `'`).replace(/&#8230;/g, `...`));
           newJournal.content = (myData[x]['content'].replace(/&#039;/g, `'`));
           newJournal.categories = myData[x]['categories'];
           newJournal.image = myData[x]['image'];

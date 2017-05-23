@@ -6,7 +6,7 @@ import { FooterViewComponent } from './view/footer-view/footer-view.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css',
-  						'../../node_modules/font-awesome/css/font-awesome.css']
+  				'../../node_modules/font-awesome/css/font-awesome.css']
 })
 export class AppComponent {
   title = 'app works!';

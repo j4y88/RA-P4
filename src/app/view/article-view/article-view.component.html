@@ -4,12 +4,13 @@
 		<div class="flex flex-col width75 verticalLine">
 			<div class="flex flex-col">
 				<div class="journalImageCell">
-					<img src="{{ imageValue }}" onerror="this.src='../../../../assets/images/error.png'" class="journalListImage relative">
+					<img src="{{ imageValue }}" onerror="this.src='../../../../assets/images/error.png'" class="journalListImage">
 					<p class="journalTitleTxt">{{ titleValue }}</p>
 					<p class="journalDateTxt">{{ dateValue }}</p>
 				</div>
+			<p class="journalContentTxt">{{ contentValue }}</p>
+			<app-journal-form></app-journal-form>
 			</div>
-		<p class="journalContentTxt">{{ contentValue }}</p>
 		</div>
 		<div class="flex flex-col marginH10">
 			<h5>CONTACT INFO</h5>
@@ -26,5 +27,4 @@
 			<p>March</p>
 		</div>
 	</div>
-</article><br>
-<app-journal-form></app-journal-form>
+</article>

@@ -31,11 +31,13 @@ export class JournalService {
     .find(journal => journal.ID == id));
   }
 
-  createJournal(journal): Promise<Journal> {
+  createJournal(journal) {
+    let postUrl = 'http://portal.helloitscody.com/inhabitent/api/post/94a08da1fecbb6e8b46990538c7b50b2?params=' + journal;
+    console.log(postUrl);
     return this.http
-      .post(this.journalsUrl, JSON.stringify(journal), {headers: this.headers})
+      .post(postUrl, Option)
       .toPromise()
-      .then(response => response.json().data as Journal)
+      .then(response => response.json().data)
       .catch(this.handleError);
   }
 

@@ -7,8 +7,7 @@ import { JournalService } from '../../services/journal.service';
 @Component({
   selector: 'app-latest-adventure-view',
   templateUrl: './latest-adventure-view.component.html',
-  styleUrls: ['./latest-adventure-view.component.css',
-              '../../app.component.css']
+  styleUrls: ['./latest-adventure-view.component.css']
 })
 
 export class LatestAdventureViewComponent implements OnInit {
@@ -28,7 +27,7 @@ export class LatestAdventureViewComponent implements OnInit {
       if (myData[x]!=='count'){
         let newJournal = new Journal();
         newJournal.ID = myData[x]['ID'];
-        newJournal.title = (myData[x]['title'].replace(/&#039;/g, `'`));
+        newJournal.title = (myData[x]['title'].replace(/&#039;/g, `'`).replace(/&#8230;/g, `...`));
         newJournal.content = (myData[x]['content'].replace(/&#039;/g, `'`));
         newJournal.categories = myData[x]['categories'];
         newJournal.image = myData[x]['image'];

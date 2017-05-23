@@ -42,13 +42,10 @@ h6 {
   font-size: .8em;
 }
 button {
-  color: #ffffff;
-  background-color: #248a83;
+  color: #000000;
+  background-color: transparent;
   border: 1px solid #248a83;
   padding: 5px 20px;
-}
-.relative {
-  position: relative;
 }
 .flex {
   display: flex;
@@ -87,27 +84,27 @@ button {
   margin-bottom: 25px;
 }
 .journalListImage {
+  position: absolute;
   height: 35vw;
   width: 65vw;
 }
 .journalTitleTxt {
-  position: relative;
-  bottom: 28vw;
+  position: absolute;
+  top:25%;
   background-color: #248a83;
   font-family: Novecento;
   font-weight: bold;
-  font-size: 1.25em;
+  font-size: 1.4em;
   color: #ffffff;
-  padding: 1.5vw 5vw 1.5vw 1.5vw;
-  max-width: 15vw
+  padding: 1.5rem 3rem 1.5rem 1.5rem;
+  max-width: 20vw
 }
 .journalDateTxt {
-  position: relative;
-  bottom: 9.55vw;
-  left: 45.5vw;
-  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   background-color: #248a83;
-  padding: 1.5vw 1.5vw 1.5vw 3vw;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
   color: #ffffff;
   font-size: 1em;
   font-weight: bold;
@@ -117,6 +114,7 @@ button {
   margin: 10px 0px;
 }
 .journalImageCell {
+  position: relative;
   height: 35vw;
   width: 65vw;
 }

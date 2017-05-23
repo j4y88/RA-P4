@@ -6,8 +6,7 @@ import { JournalService } from '../../services/journal.service';
 @Component({
   selector: 'app-journal-form',
   templateUrl: './journal-form.component.html',
-  styleUrls: ['./journal-form.component.css',
-  						'../../app.component.css']
+  styleUrls: ['./journal-form.component.css']
 })
 
 export class JournalFormComponent {
@@ -24,12 +23,15 @@ export class JournalFormComponent {
 
   constructor(private journalService: JournalService){}
 
-  submitForm(jform: Journal) {
-    this.jform.author=this.jform.author.trim();
-    this.jform.content=this.jform.content.trim();
-  	console.log(jform);
- 		alert(JSON.stringify(jform));
-    let newForm = this.journalService.jsSerializeArray(jform);
-    console.log(newForm);
- }
+  submitForm(e:any) {
+    console.log((e.target as HTMLButtonElement).parentElement);
+    const theForm = (e.target as HTMLButtonElement).parentElement;
+    const serializedForm = this.journalService.jsSerializeArray(theForm);
+    console.log(serializedForm);
+    const formData = JSON.stringify(serializedForm);
+    console.log(formData);
+    //const dataParams = { 'params': formData };
+    //console.log(dataParams);
+    const postThisJournal = this.journalService.createJournal(formData);
+  }
 }

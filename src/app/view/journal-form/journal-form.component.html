@@ -1,51 +1,40 @@
-<div class="flex flex-center-j">
-	<div class="flex width90 flex-col">
-		<h3>POST A NEW JOURNAL</h3>
-		<form (ngSubmit) = "submitForm(jform)">
-	    <div class="flex flex-col">
-	    	<div class="flex flex-row flex-center-a">
-	    		<div class="width10">
-		      	<label class="formInputField">Name: </label>
-		      </div>
-		      <div class="width80">
-		      	<input type="text" [(ngModel)]="jform.author" name="author" placeholder="name" required>
-		      </div>
-		    </div>
-		    <div class="flex flex-row flex-center-a">
-		    	<div class="width10">
-		      	<label class="formInputField">Title: </label>
-		      </div>
-		      <div class="width80">
-		      	<input type="text" [(ngModel)]="jform.title" name="title" placeholder="title" required>
-		      </div>
-		    </div>
-		    <div class="flex flex-row flex-center-a">
-		    	<div class="width10">
-		      	<label class="formInputField">Content: </label>
-		      </div>
-		      <div class="width80">
-		      	<textarea type="text" [(ngModel)]="jform.content" name="content" placeholder="content" required></textarea>
-		      </div>
-		    </div>
-		    <div class="flex flex-row flex-center-a">
-		    	<div class="width10">
-		      	<label class="formInputField">Categories: </label>
-		      </div>
-		      <div class="width80">
-		      	<input type="text" [(ngModel)]="jform.categories" name="categories" placeholder="categories" required>
-		      </div>
-		    </div>
-		    <div class="flex flex-row flex-center-a">
-		    	<div class="width10">
-		      	<label class="formInputField">Image URL: </label>
-		      </div>
-		      <div class="width80">
-		      	<input type="text" [(ngModel)]="jform.image" name="image" placeholder="image" required>
-		      </div>
-		    </div>
-	    </div>
-	    <button type="submit" name="submit">Submit</button>
-		</form>
-	</div>
-</div>
-<pre>Form : {{ jform.author }} {{ jform.title }} {{ jform.content }} {{ jform.image }} {{ jform.categories }}</pre>
+<br>
+<h3>POST A NEW JOURNAL</h3>
+<form id="apiForm" method="post" #apiForm="ngForm">
+  <div class="flex flex-col">
+    <div class="flex flex-row flex-center-a">
+    	<div class="width15">
+      	<label class="formInputField">Title: </label>
+      </div>
+      <div class="width80">
+      	<input type="text" id ="title" name="title" placeholder="Title" value="Bond... James Bond" class="form-field" required>
+      </div>
+    </div>
+    <div class="flex flex-row flex-center-a">
+    	<div class="width15">
+      	<label class="formInputField">Content: </label>
+      </div>
+      <div class="width80">
+      	<textarea name="content" id="content" class="form-field" rows="5" placeholder="Content" required>Although agent 007 may laugh in the face of death, one thing he never takes lightly is his drinking. Then again, if your job involved ventilating bad guys with a Walther P99, you might turn to the bottle as well. Here he shows off his remarkable palate by ordering his signature drink.</textarea>
+      </div>
+    </div>
+    <div class="flex flex-row flex-center-a">
+    	<div class="width15">
+      	<label class="formInputField">Image URL: </label>
+      </div>
+      <div class="width80">
+      	<input type="text" id="image" name="image" placeholder="Image Link" value="https://www.it.mk/wp-content/uploads/2015/11/James-Bond-Logo.jpg" class="form-field" required>
+      </div>
+    </div>
+    <div class="flex flex-row flex-center-a">
+      <div class="width15">
+        <label class="formInputField">Categories: </label>
+      </div>
+      <select multiple id="categories" name="categories" class="form-field" required>
+        <option>--select--</option>
+        <option>Adventure</option>
+      </select>
+    </div>
+  </div>
+  <button class="green-btn" type="button" name="submit" id="submit" (click)="submitForm($event)">Submit <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+</form>

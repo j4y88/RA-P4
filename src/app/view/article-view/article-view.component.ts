@@ -9,8 +9,7 @@ import { JournalService } from '../../services/journal.service';
 @Component({
   selector: 'app-article-view',
   templateUrl: './article-view.component.html',
-  styleUrls: ['./article-view.component.css',
-  						'../../app.component.css']
+  styleUrls: ['./article-view.component.css']
 })
 
 export class ArticleViewComponent implements OnInit {
@@ -42,7 +41,7 @@ export class ArticleViewComponent implements OnInit {
         if (myData[x]!=='count'){
           let newJournal = new Journal();
           newJournal.ID = myData[x]['ID'];
-          newJournal.title = (myData[x]['title'].replace(/&#039;/g, `'`));
+          newJournal.title = (myData[x]['title'].replace(/&#039;/g, `'`).replace(/&#8230;/g, `...`));
           newJournal.content = (myData[x]['content'].replace(/&#039;/g, `'`));
           newJournal.categories = myData[x]['categories'];
           newJournal.image = myData[x]['image'];
@@ -58,6 +57,7 @@ export class ArticleViewComponent implements OnInit {
     }
     
     this.route.params.subscribe(params => this.storeTheId(params['ID']));
+
     myPromiseOfBlogs.then(extractDataFromPromise).catch(this.onDataError);
    
   }
