@@ -1,5 +1,7 @@
-import { Component , ViewEncapsulation} from '@angular/core';
+import { Component , ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { Validators } from '@angular/forms';
+
 import { PostJournal } from '../../model/post-journal';
 import { Journal } from '../../model/journal';
 import { JournalService } from '../../services/journal.service';

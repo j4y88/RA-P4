@@ -20,6 +20,7 @@ import { HomeViewComponent } from './view/home-view/home-view.component';
 import { Nav2ViewComponent } from './view/nav2-view/nav2-view.component';
 import { ArticleViewComponent } from './view/article-view/article-view.component';
 import { JournalFormComponent } from './view/journal-form/journal-form.component';
+import { AdventureViewComponent } from './view/adventure-view/adventure-view.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { JournalFormComponent } from './view/journal-form/journal-form.component
     Nav2ViewComponent,
     ArticleViewComponent,
     JournalFormComponent,
+    AdventureViewComponent,
   ],
   imports: [
     BrowserModule,
