@@ -9,19 +9,32 @@ import { JournalList } from '../model/journal-list';
 
 @Injectable()
 export class JournalService {
-  proxyUrl = 'http://www.edapostol.com/proxy/proxy.php?url=';
+  proxyUrl = 'https://www.edapostol.com/proxy/proxy.php?url=';
   journalsUrl = 'http://portal.helloitscody.com/inhabitent/api/get/94a08da1fecbb6e8b46990538c7b50b2/';
-  finalUrl = 'http://www.edapostol.com/proxy/proxy.php?url=http://portal.helloitscody.com/inhabitent/api/get/94a08da1fecbb6e8b46990538c7b50b2/'
+  finalUrl = this.proxyUrl + this.journalsUrl;
   private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: Http) { }
 
   getJournals(): Promise<Journal[]> {
+    /* Normal Server
     let newPromise: any =  
     this.http.get(this.journalsUrl)
     .toPromise()
-    .then( response => {return response.json(); } )
+    .then( response => {console.log(response.json()); return response.json(); } )
     .catch( error => {console.log(error)} );
+    console.log(newPromise);
+    /*/
+
+    //* Proxy Server
+    let newPromise: any =  
+    this.http.get(this.finalUrl)
+    .toPromise()
+    .then( response => {console.log(response.json()); return Promise.resolve(response.json().contents); } )
+    .catch( error => {console.log(error)} );
+    console.log(newPromise);
+    //*/
+
     return newPromise;
   }
 

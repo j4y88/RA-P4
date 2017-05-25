@@ -28,12 +28,9 @@ export class JournalFormComponent {
   constructor(private journalService: JournalService, private router: Router){}
 
   submitForm(e:any) {
-    console.log((e.target as HTMLButtonElement).parentElement);
     const theForm = (e.target as HTMLButtonElement).parentElement;
     const serializedForm = this.journalService.jsSerializeArray(theForm);
-    console.log(serializedForm);
     const formData = JSON.stringify(serializedForm);
-    console.log(formData);
     const postThisJournal = this.journalService.createJournal(formData);
     alert('Journal Sent!');
     this.router.navigate(['/journal']);

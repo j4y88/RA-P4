@@ -23,7 +23,7 @@ export class JournalViewComponent implements OnInit {
     const extractDataFromPromise: Function = (response) => {
     let myList:JournalList = <JournalList>response as JournalList;
     let myData = myList;
-    let newList = new JournalList();
+        let newList = new JournalList();
     for (let x = 0 ; x < myData.count; x++){
       if (myData[x]!=='count'){
         let newJournal = new Journal();
